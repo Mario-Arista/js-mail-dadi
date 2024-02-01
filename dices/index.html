@@ -10,10 +10,14 @@
 
 </head>
 <body>
+    <header class="container-fluid bg-dark">
+        <h1 class="text-center text-white">BENVENUTO AL CASINO' DI SANMARIO</h1>
+        <p class="text-center text-success">Lancia il tuo Dado e batti il Computer!</p>
+    </header>
 
-    <div class="container">
+    <div class="container mb-5">
         <div class="row">
-            <div class="col-10">
+            <div class="col-12 text-center">
                 <input id="user-dice" value="Lancia il tuo dado" type="button">
             </div>
         </div>
@@ -22,10 +26,13 @@
     <div class="container">
         <div class="row">
             <div class="col-10">
-                <div id="outputs-users">
+                <div id="outputs-users ">
+                    <h2 id="show-after" class="d-none">IL TUO DADO:</h2>
                     <div id="result-user">
 
                     </div>
+
+                    <h2 id="show-after-comp" class="d-none">IL DADO DEL COMPUTER:</h2>
                     <div id="result-computer">
 
                     </div>
