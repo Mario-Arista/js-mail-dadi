@@ -2,8 +2,6 @@
 
 const userArrayMails = ["mario@tiscali.it", "giovanni@tiscali.it", "michele@tiscali.it","giovanni@tiscali.it","elisa@tiscali.it", "martina@tiscali.it", "caterina@tiscali.it"];
 
-const variabile = false;
-
 // Mi creo una costante per Button
 const buttonMail = document.getElementById("button-mail");
 
@@ -16,6 +14,9 @@ const containerElement = document.querySelector(".outputs-user");
 // Creo un evento al click con dentro un if per capire 
 // corrispondenza input utente - elemento array
 
+const variabile =false;
+let newEmail;
+
 buttonMail.addEventListener("click",
 
     function() {
@@ -25,14 +26,20 @@ buttonMail.addEventListener("click",
 
         for ( i=0; i < userArrayMails.length; i++) {
 
-            if (mailUsers.value == userArrayMails[ì]) {
+            let newEmail = userArrayMails[i];
+            
+            if (newEmail == mailUsers) {
                 const variabile = true;
-                newElement.innerText = "mail non presente";
-            } else {
-                newElement.innerText = "Mail già presente";
+
             }
             
                 
+        }
+
+        if (variabile) {
+            newElement.innerHTML = "Ci sei";
+        } else {
+            newElement.innerHTML = "Non ci sei";
         }
        
 
