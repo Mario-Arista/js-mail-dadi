@@ -2,6 +2,7 @@
 
 const userArrayMails = ["mario@tiscali.it", "giovanni@tiscali.it", "michele@tiscali.it","giovanni@tiscali.it","elisa@tiscali.it", "martina@tiscali.it", "caterina@tiscali.it"];
 
+const variabile = false;
 
 // Mi creo una costante per Button
 const buttonMail = document.getElementById("button-mail");
@@ -18,16 +19,23 @@ const containerElement = document.querySelector(".outputs-user");
 buttonMail.addEventListener("click",
 
     function() {
+
         const newElement = document.createElement("span")
         containerElement.append(newElement);
 
-        if (mailUsers.value != userArrayMails[0, 1, 2, 3, 4, 5, 6]) {
-            newElement.innerHTML = `ERRORE, la tua mail non è presente nel database`;
-    
-        } else {
-            newElement.innerHTML = `La tua mail è presente nel database. Per continuare accedi all'area riservata!`;
-        }
+        for ( i=0; i < userArrayMails.length; i++) {
 
+            if (mailUsers.value == userArrayMails[ì]) {
+                const variabile = true;
+                newElement.innerText = "mail non presente";
+            } else {
+                newElement.innerText = "Mail già presente";
+            }
+            
+                
+        }
+       
 
     }
 )
+
