@@ -12,31 +12,24 @@ const diceUser = Math.floor(Math.random() * 6) + 1;
 // COMPUTER
 const diceComputer = Math.floor(Math.random() * 6) + 1;
 
-// Genero costante con OUTPUT
+// Genero costante con OUTPUTS
 
-const outputsElement = document.querySelector(".outputs");
+const numberUserElement = document.querySelector("#result-user");
+const numberComputerElement = document.querySelector("#result-computer");
+const messageUserElement = document.querySelector("#message-user");
+
 
 // creo output al click dell'input
 
 userButtonElement.addEventListener("click",
     function() {
 
-        // creo nuovo elemento output utente
-        const newElement = document.createElement("div");
+        // Stampo lancio dado utente
+        numberUserElement.innerHTML = diceUser;
 
-        // Genero nuovo elemento con append
-        outputsElement.append(newElement);
+        // Stampo lancio dado utente
+        numberComputerElement.innerHTML = diceComputer
 
-        newElement.innerHTML = diceUser;
-
-        // creo nuovo elemento output computer
-        const newTwoElement = document.createElement("div");
-
-        // Genero nuovo elemento con append
-        outputsElement.append(newTwoElement);
         
-        newTwoElement.innerHTML = diceComputer;
-
-
     }
 )
