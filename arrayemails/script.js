@@ -37,9 +37,9 @@ buttonMail.addEventListener("click",
         }
 
         if (variabile) {
-            newElement.innerHTML = "Ci sei";
+            newElement.innerHTML = "Ci sono";
         } else {
-            newElement.innerHTML = "Non ci sei";
+            newElement.innerHTML = "Ci Faccio";
         }
        
 
