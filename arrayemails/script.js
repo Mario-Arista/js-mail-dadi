@@ -15,7 +15,6 @@ const containerElement = document.querySelector(".outputs-user");
 // corrispondenza input utente - elemento array
 
 const variabile =false;
-let newEmail;
 
 buttonMail.addEventListener("click",
 
@@ -25,15 +24,12 @@ buttonMail.addEventListener("click",
         containerElement.append(newElement);
 
         for ( i=0; i < userArrayMails.length; i++) {
-
-            let newEmail = userArrayMails[i];
             
-            if (newEmail == mailUsers) {
+            if (userArrayMails[i] == mailUsers.value) {
                 const variabile = true;
 
             }
-            
-                
+             
         }
 
         if (variabile) {
