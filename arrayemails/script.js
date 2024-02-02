@@ -11,8 +11,7 @@ const mailUsers = document.getElementById("mail-user");
 // Mi creo una costante output
 const containerElement = document.querySelector(".outputs-user");
 
-// Creo un evento al click con dentro un if per capire 
-// corrispondenza input utente - elemento array
+// Usare booleana con for con dentro if
 
 let emailCorretta =false;
 
