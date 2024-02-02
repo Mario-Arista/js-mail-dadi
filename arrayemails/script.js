@@ -14,7 +14,7 @@ const containerElement = document.querySelector(".outputs-user");
 // Creo un evento al click con dentro un if per capire 
 // corrispondenza input utente - elemento array
 
-const variabile =false;
+let emailCorretta =false;
 
 buttonMail.addEventListener("click",
 
@@ -26,13 +26,13 @@ buttonMail.addEventListener("click",
         for ( i=0; i < userArrayMails.length; i++) {
             
             if (userArrayMails[i] == mailUsers.value) {
-                const variabile = true;
+                let emailCorretta = true;
 
             }
              
         }
 
-        if (variabile) {
+        if (emailCorretta) {
             newElement.innerHTML = "Ci sono";
         } else {
             newElement.innerHTML = "Ci Faccio";
