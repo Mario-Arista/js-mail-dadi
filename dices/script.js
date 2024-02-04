@@ -8,32 +8,26 @@ const userButtonElement = document.getElementById("user-dice")
 
 // UTENTE
 const diceUser = Math.floor(Math.random() * 6) + 1;
+document.querySelector("#result-user img").src = `./img/${diceUser}.png`;
 
 // COMPUTER
 const diceComputer = Math.floor(Math.random() * 6) + 1;
+document.querySelector("#result-computer img").src = `./img/${diceComputer}.png`;
 
 // Genero costante con OUTPUTS
-
 const numberUserElement = document.querySelector("#result-user");
 const numberComputerElement = document.querySelector("#result-computer");
 const messageUserElement = document.querySelector("#message-user");
-const showtitleElement = document.querySelector("#show-after");
-const showtitle2Element = document.querySelector("#show-after-comp");
-
 
 // creo output al click dell'input
 
 userButtonElement.addEventListener("click",
     function() {
 
-        // Stampo lancio dado utente
-        numberUserElement.innerHTML = diceUser;
+        // Mostro elementi in pagina
 
-        // Stampo lancio dado utente
-        numberComputerElement.innerHTML = diceComputer;
-
-        showtitleElement.className = "d-block fs-6";
-        showtitle2Element.className = "d-block fs-6";
+        numberUserElement.classList.remove("d-none");
+        numberComputerElement.classList.remove("d-none");
 
         // messaggio diverso se utente vince, perde pareggia
 

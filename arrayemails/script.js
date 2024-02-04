@@ -10,6 +10,7 @@ const mailUsers = document.getElementById("mail-user");
 
 // Mi creo output
 const outputUser = document.querySelector("#result-user");
+const hiddenElement = document.querySelector(".to_hide");
 
 // Usare booleana con for con dentro if
 
@@ -17,6 +18,8 @@ buttonMail.addEventListener("click",
 
     function() {
 
+        
+        
         let emailCorretta = false;
 
         for ( i=0; i < userArrayMails.length; i++) {
@@ -28,11 +31,14 @@ buttonMail.addEventListener("click",
             }
 
             if (emailCorretta) {
-
-                outputUser.innerHTML = "Ci sono";
+                hiddenElement.classList.remove("d-none");
+                outputUser.innerHTML = "La tua mail è presente!";
+                
 
             } else {
-                outputUser.innerHTML = "Non ci sono";
+                hiddenElement.classList.remove("d-none");
+                outputUser.innerHTML = "La tua mail non è presente!";
+                
             }
              
         }

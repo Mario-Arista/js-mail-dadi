@@ -11,33 +11,35 @@
 </head>
 <body>
     <header class="container-fluid bg-dark">
-        <h1 class="text-center text-white">BENVENUTO AL CASINO' DI SANMARIO</h1>
-        <p class="text-center text-success">Lancia il tuo Dado e batti il Computer!</p>
+        <h1 class="text-center text-white p-3">BENVENUTO AL CASINO' DI SANMARIO</h1>
+        <p class="text-center text-success p-3">Lancia il tuo Dado e batti il Computer!</p>
     </header>
 
-    <div class="container mb-5">
-        <div class="row">
-            <div class="col-12 text-center">
-                <input id="user-dice" value="Lancia il tuo dado" type="button">
+    <div class="mt-5 mb-5">
+            <div class="text-center">
+                <input class="bg-success text-black fs-2" id="user-dice" value="Lancia il tuo dado" type="button">
             </div>
-        </div>
     </div>
 
     <div class="container">
+
         <div class="row">
-            <div class="col-10">
-                <div id="outputs-users ">
-                    <h2 id="show-after" class="d-none">IL TUO DADO:</h2>
-                    <div id="result-user">
 
+            <div class="col-10 ms-auto me-auto">
+
+                <div class="d-flex flex-column align-items-center gap-2 bg-white" id="outputs-users">
+     
+                    <div class="d-flex flex-column align-items-center border-2 d-none" id="result-user">
+                        <h2 class="fw-bold fs-2 text-success">IL TUO DADO:</h2>
+                        <img src="./img/1.png" alt="dado utente">
                     </div>
 
-                    <h2 id="show-after-comp" class="d-none">IL DADO DEL COMPUTER:</h2>
-                    <div id="result-computer">
-
+                    <div class="d-flex flex-column align-items-center border-2 mb-4 d-none" id="result-computer">
+                        <h2 class="fw-bold fs-2 text-success">IL DADO DEL COMPUTER:</h2>
+                        <img src="./img/1.png" alt="dado utente">
                     </div>
-
-                    <div id="message-user">
+                    
+                    <div class="bg-success text-black fw-bold" id="message-user">
                         
                     </div>
 
